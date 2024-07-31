@@ -7,19 +7,14 @@ RUN apt-get update && apt-get install -y python3 python3-pip git && rm -rf /var/
 
 WORKDIR /workspace
 COPY requirements.txt .
-# RUN pip3 install --disable-pip-version-check -U -r requirements.txt
 RUN python3 -m pip install --disable-pip-version-check -U -r requirements.txt
 
-# Jupyter
+# Jupyter (optional to run notebook inside the container)
 RUN pip install jupyter 
 EXPOSE 8888
 
 ## Prepare src code 
 COPY . .
-# RUN git clone --recursive https://github.com/mlcommons/inference \
-#     && cd inference/vision/classification_and_detection/python \
-#     && git checkout r2.1 \
-#     && cp /workspace/server/* ./
 
 ## Setup FaaS components
 WORKDIR /workspace/server
@@ -35,5 +30,5 @@ ENV fprocess="python3 index.py"
 
 # Without Jupyter
 CMD ["fwatchdog"]
-# Jupyter & watchdog
+# With Jupyter
 # CMD jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root & fwatchdog
