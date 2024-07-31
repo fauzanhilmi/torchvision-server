@@ -21,29 +21,20 @@ def initialize():
     global model, labels, image
 
     # Load image
-    # with Image.open(base_dir + '/car.jpg') as img:
-    #     image = io.BytesIO()
-    #     img.save(image, format='JPEG')
-    #     image.seek(0)
-    # image = transform_image(image)
     raw_image = read_image("./car.jpg")
     raw_image = raw_image.to("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
     # Load model from torchvision
-    # model = retinanet_resnet50_fpn_v2(weights=RetinaNet_ResNet50_FPN_V2_Weights.DEFAULT)
-    model = get_model("fasterrcnn_resnet50_fpn_v2",weights="DEFAULT")
+    model = get_model("deeplabv3_resnet50",weights="DEFAULT")
     model = model.to("cuda:0" if torch.cuda.is_available() else "cpu")
     model.eval()
 
     # Transform image
-    weights = get_weight('FasterRCNN_ResNet50_FPN_V2_Weights.DEFAULT')
+    weights = get_weight('DeepLabV3_ResNet50_Weights.DEFAULT')
     transform = weights.transforms()
     image = transform(raw_image)
     image = image.unsqueeze(0)
-
-    # with open(base_dir + '/retinanet_class_index.json') as json_file:
-    #     labels = json.loads(json_file.read())
 
 def post_process(result):
     bboxes_ = result[0] 

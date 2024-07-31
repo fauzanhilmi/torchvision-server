@@ -10,8 +10,8 @@ COPY requirements.txt .
 RUN python3 -m pip install --disable-pip-version-check -U -r requirements.txt
 
 # Jupyter (optional to run notebook inside the container)
-RUN pip install jupyter 
-EXPOSE 8888
+# RUN pip install jupyter 
+# EXPOSE 8888
 
 ## Prepare src code 
 COPY . .
@@ -25,7 +25,6 @@ ENV upstream_url="http://127.0.0.1:5000"
 ENV read_timeout="60s"
 ENV write_timeout="60s"
 ENV exec_timeout="60s"
-# ENV fprocess="python3 /workspace/inference/vision/classification_and_detection/python/index.py"
 ENV fprocess="python3 index.py"
 
 # Without Jupyter
