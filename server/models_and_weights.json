@@ -1,0 +1,190 @@
+{
+    "alexnet": {
+        "model": "alexnet",
+        "weights": "AlexNet_Weights.DEFAULT"
+    },
+    "convnext_base": {
+        "model": "convnext_base",
+        "weights": "ConvNeXt_Base_Weights.DEFAULT"
+    },
+    "convnext_large": {
+        "model": "convnext_large",
+        "weights": "ConvNeXt_Large_Weights.DEFAULT"
+    },
+    "convnext_small": {
+        "model": "convnext_small",
+        "weights": "ConvNeXt_Small_Weights.DEFAULT"
+    },
+    "convnext_tiny": {
+        "model": "convnext_tiny",
+        "weights": "ConvNeXt_Tiny_Weights.DEFAULT"
+    },
+    "densenet121": {
+        "model": "densenet121",
+        "weights": "DenseNet121_Weights.DEFAULT"
+    },
+    "densenet161": {
+        "model": "densenet161",
+        "weights": "DenseNet161_Weights.DEFAULT"
+    },
+    "densenet169": {
+        "model": "densenet169",
+        "weights": "DenseNet169_Weights.DEFAULT"
+    },
+    "densenet201": {
+        "model": "densenet201",
+        "weights": "DenseNet201_Weights.DEFAULT"
+    },
+    "googlenet": {
+        "model": "googlenet",
+        "weights": "GoogLeNet_Weights.DEFAULT"
+    },
+    "inception_v3": {
+        "model": "inception_v3",
+        "weights": "Inception_V3_Weights.DEFAULT"
+    },
+    "mobilenets_v2": {
+        "model": "mobilenets_v2",
+        "weights": "MobileNet_V2_Weights.DEFAULT"
+    },
+    "mobilenets_v3_large": {
+        "model": "mobilenets_v3_large",
+        "weights": "MobileNet_V3_Large_Weights.DEFAULT"
+    },
+    "mobilenets_v3_small": {
+        "model": "mobilenets_v3_small",
+        "weights": "MobileNet_V3_Small_Weights.DEFAULT"
+    },
+    "resnet101": {
+        "model": "resnet101",
+        "weights": "ResNet101_Weights.DEFAULT"
+    },
+    "resnet152": {
+        "model": "resnet152",
+        "weights": "ResNet152_Weights.DEFAULT"
+    },
+    "resnet18": {
+        "model": "resnet18",
+        "weights": "ResNet18_Weights.DEFAULT"
+    },
+    "resnet34": {
+        "model": "resnet34",
+        "weights": "ResNet34_Weights.DEFAULT"
+    },
+    "resnet50": {
+        "model": "resnet50",
+        "weights": "ResNet50_Weights.DEFAULT"
+    },
+    "vgg11_bn": {
+        "model": "vgg11_bn",
+        "weights": "VGG11_BN_Weights.DEFAULT"
+    },
+    "vgg11": {
+        "model": "vgg11",
+        "weights": "VGG11_Weights.DEFAULT"
+    },
+    "vgg13_bn": {
+        "model": "vgg13_bn",
+        "weights": "VGG13_BN_Weights.DEFAULT"
+    },
+    "vgg13": {
+        "model": "vgg13",
+        "weights": "VGG13_Weights.DEFAULT"
+    },
+    "vgg16_bn": {
+        "model": "vgg16_bn",
+        "weights": "VGG16_BN_Weights.DEFAULT"
+    },
+    "vgg16": {
+        "model": "vgg16",
+        "weights": "VGG16_Weights.DEFAULT"
+    },
+    "vgg19_bn": {
+        "model": "vgg19_bn",
+        "weights": "VGG19_BN_Weights.DEFAULT"
+    },
+    "vgg19": {
+        "model": "vgg19",
+        "weights": "VGG19_Weights.DEFAULT"
+    },
+    "vit_b_16": {
+        "model": "vit_b_16",
+        "weights": "ViT_B_16_Weights.DEFAULT"
+    },
+    "vit_b_32": {
+        "model": "vit_b_32",
+        "weights": "ViT_B_32_Weights.DEFAULT"
+    },
+    "vit_h_14": {
+        "model": "vit_h_14",
+        "weights": "ViT_H_14_Weights.DEFAULT"
+    },
+    "vit_l_16": {
+        "model": "vit_l_16",
+        "weights": "ViT_L_16_Weights.DEFAULT"
+    },
+    "vit_l_32": {
+        "model": "vit_l_32",
+        "weights": "ViT_L_32_Weights.DEFAULT"
+    },
+    "fcos_resnet50_fpn": {
+        "model": "fcos_resnet50_fpn",
+        "weights": "FCOS_ResNet50_FPN_Weights.DEFAULT"
+    },
+    "fasterrcnn_mobilenet_v3_large_320_fpn": {
+        "model": "fasterrcnn_mobilenet_v3_large_320_fpn",
+        "weights": "FasterRCNN_MobileNet_V3_Large_320_FPN_Weights.DEFAULT"
+    },
+    "fasterrcnn_mobilenet_v3_large_fpn": {
+        "model": "fasterrcnn_mobilenet_v3_large_fpn",
+        "weights": "FasterRCNN_MobileNet_V3_Large_FPN_Weights.DEFAULT"
+    },
+    "fasterrcnn_resnet50_fpn_v2": {
+        "model": "fasterrcnn_resnet50_fpn_v2",
+        "weights": "FasterRCNN_ResNet50_FPN_V2_Weights.DEFAULT"
+    },
+    "fasterrcnn_resnet50_fpn": {
+        "model": "fasterrcnn_resnet50_fpn",
+        "weights": "FasterRCNN_ResNet50_FPN_Weights.DEFAULT"
+    },
+    "retinanet_resnet50_fpn_v2": {
+        "model": "retinanet_resnet50_fpn_v2",
+        "weights": "RetinaNet_ResNet50_FPN_V2_Weights.DEFAULT"
+    },
+    "retinanet_resnet50_fpn": {
+        "model": "retinanet_resnet50_fpn",
+        "weights": "RetinaNet_ResNet50_FPN_Weights.DEFAULT"
+    },
+    "ssd300_vgg16": {
+        "model": "ssd300_vgg16",
+        "weights": "SSD300_VGG16_Weights.DEFAULT"
+    },
+    "ssdlite320_mobilenet_v3_large": {
+        "model": "ssdlite320_mobilenet_v3_large",
+        "weights": "SSDLite320_MobileNet_V3_Large_Weights.DEFAULT"
+    },
+    "deeplabv3_mobilenet_v3_large": {
+        "model": "deeplabv3_mobilenet_v3_large",
+        "weights": "DeepLabV3_MobileNet_V3_Large_Weights.DEFAULT"
+    },
+    "deeplabv3_resnet101": {
+        "model": "deeplabv3_resnet101",
+        "weights": "DeepLabV3_ResNet101_Weights.DEFAULT"
+    },
+    "deeplabv3_resnet50": {
+        "model": "deeplabv3_resnet50",
+        "weights": "DeepLabV3_ResNet50_Weights.DEFAULT"
+    },
+    "fcn_resnet101": {
+        "model": "fcn_resnet101",
+        "weights": "FCN_ResNet101_Weights.DEFAULT"
+    },
+    "fcn_resnet50": {
+        "model": "fcn_resnet50",
+        "weights": "FCN_ResNet50_Weights.DEFAULT"
+    },
+    "lraspp_mobilenet_v3_large": {
+        "model": "lraspp_mobilenet_v3_large",
+        "weights": "LRASPP_MobileNet_V3_Large_Weights.DEFAULT"
+    }
+}
