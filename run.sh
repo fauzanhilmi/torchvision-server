@@ -4,13 +4,25 @@ OBJECT_DETECTION_MODELS=("fcos_resnet50_fpn" "fasterrcnn_mobilenet_v3_large_320_
 SEMANTIC_SEGMENTATION_MODELS=("deeplabv3_mobilenet_v3_large" "deeplabv3_resnet101" "deeplabv3_resnet50" "fcn_resnet101" "fcn_resnet50" "lraspp_mobilenet_v3_large")
 ALL_MODELS=("${CLASSIFICATION_MODELS[@]}" "${OBJECT_DETECTION_MODELS[@]}" "${SEMANTIC_SEGMENTATION_MODELS[@]}")
 
-CUR_MODELS=$CLASSIFICATION_MODELS # Change this to run for different models
+############################ Variables to change ###################################
+CUR_MODELS=("${OBJECT_DETECTION_MODELS[@]}")
+DOCKER_START_WAITING_TIME=2
+DOCKER_END_WAITING_TIME=2
+QUOTAS=(3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100)
+####################################################################################
 
+echo "Running for models: ${CUR_MODELS[@]}"
+
+# In case there's dangling container
+docker stop visionserver
+while docker ps | grep -q visionserver; do
+    sleep 1
+done
+sleep $DOCKER_END_WAITING_TIME
+
+# Run each model under different GPU quotas
 for MODEL in "${CUR_MODELS[@]}"; do
     CSV_FILE="$MODEL.csv"
-    DOCKER_START_WAITING_TIME=2
-    DOCKER_END_WAITING_TIME=2
-    QUOTAS=(3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100)
 
     echo '"gpu_quota","throughput","req_count","avg_latency","p90_latency","p95_latency"' > "$CSV_FILE"
     for QUOTA in "${QUOTAS[@]}"; do
