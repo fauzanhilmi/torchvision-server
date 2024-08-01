@@ -8,6 +8,7 @@ Note: not all models are implemented. See `server/implemented_models.txt`
 
 ## How to run
 `docker build -t visionserver .`
+
 `docker run MODEL=alexnet --network host --rm --name visionserver --ipc=host visionserver`
 
 replace MODEL with other model
