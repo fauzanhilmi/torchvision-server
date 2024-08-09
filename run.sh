@@ -5,7 +5,9 @@ SEMANTIC_SEGMENTATION_MODELS=("deeplabv3_mobilenet_v3_large" "deeplabv3_resnet10
 ALL_MODELS=("${CLASSIFICATION_MODELS[@]}" "${OBJECT_DETECTION_MODELS[@]}" "${SEMANTIC_SEGMENTATION_MODELS[@]}")
 
 ############################ Variables to change ###################################
-CUR_MODELS=("${OBJECT_DETECTION_MODELS[@]}")
+LEFTOVER_CLASSIFICATION_MODELS=("mobilenet_v2" "mobilenet_v3_large" "mobilenet_v3_small" "resnet101" "resnet152" "resnet18" "resnet34" "resnet50" "vgg11_bn" "vgg11" "vgg13_bn" "vgg13" "vgg16_bn" "vgg16" "vgg19_bn" "vgg19" "vit_b_16" "vit_b_32" "vit_h_14" "vit_l_16" "vit_l_32")
+
+CUR_MODELS=("${LEFTOVER_CLASSIFICATION_MODELS[@]}")
 DOCKER_START_WAITING_TIME=2
 DOCKER_END_WAITING_TIME=2
 QUOTAS=(3 4 5 6 7 8 9 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100)
